@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hint Machine</title>
+  <style>
+    #hint-text {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hint Machine</h1>
+  <button onclick="displayRandomHint()">Get Hint</button>
+  <p id="hint-text"></p>
+
+  <script>
+    var hints = [
+      "Small steps today, big achievements tomorrow.",
+      "The key to success is consistent effort and determination.",
+      "Success is the reward of those who never give up.",
+      // Add more hints or messages here
+    ];
+
+    function getRandomHint() {
+      var randomIndex = Math.floor(Math.random() * hints.length);
+      return hints[randomIndex];
+    }
+
+    function displayRandomHint() {
+      var hint = getRandomHint();
+      document.getElementById("hint-text").textContent = hint;
+    }
+  </script>
+</body>
+</html>
